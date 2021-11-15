@@ -190,7 +190,7 @@ fun SendMessageTextField(
 }
 ```
 
-On the example, we receive the text (or state) that we want to show and expose the UI events which can be handled in the ViewModel. This process is what is called state hoisting. State hoisting is the act of moving the state outside of the composable, making it stateless. This approach leads to better component reusability, testability, decoupling, and control over it. Hoisting is the recommended approach by the Android team to create components.
+On the example, we receive the text (or state) that we want to show and expose the UI events, such as `onTextChanged`, which can be handled in the ViewModel. This process is what is called state hoisting. State hoisting is the act of moving the state outside of the composable, making it stateless. This approach leads to better component reusability, testability, decoupling, and control over it. Hoisting is the recommended approach by the Android team to create components.
 
 ```kotlin
 class MessageScreenViewModel() @ViewModelInject constructor(): ViewModel() {
