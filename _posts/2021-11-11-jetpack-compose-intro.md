@@ -105,7 +105,7 @@ In compose, State is deeply integrated with the Composition, which is the descri
 fun SendMessageTextField(
     onSendMessage: (String) -> Unit
 ) {
-    val text = mutableStateOf('')
+    val text = mutableStateOf("")
 
     Row {
         TextField(value = text.value, onValueChange = { text.value = it })
@@ -124,7 +124,7 @@ interface MutableState<T> : State<T> {
 }
 ```
 
-Even though `val text = mutableStateOf('')` has the intended effect of creating a state, it has two main problems:
+Even though `val text = mutableStateOf("")` has the intended effect of creating a state, it has two main problems:
 - The state is not persisted through recomposition, that means, every time the component is rebuilt, the state goes back to the default value.
 - Every time you need the value, it's necessary to use `.value` to get and set it.
 
@@ -135,7 +135,7 @@ We can solve both problems by using the `remember` composable and its `by` deleg
 fun SendMessageTextField(
     onSendMessage: (String) -> Unit
 ) {
-    val text by remeber { mutableStateOf('') }
+    val text by remeber { mutableStateOf("") }
 
     Row {
         TextField(value = text, onValueChange = { text = it })
@@ -155,7 +155,7 @@ With this implementation, the state is persisted through recomposition but still
 fun SendMessageTextField(
     onSendMessage: (String) -> Unit
 ) {
-    val text by remeberSaveable { mutableStateOf('') }
+    val text by remeberSaveable { mutableStateOf("") }
 
     Row {
         TextField(value = text, onValueChange = { text = it })
