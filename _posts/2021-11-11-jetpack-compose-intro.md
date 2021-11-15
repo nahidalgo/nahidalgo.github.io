@@ -3,7 +3,7 @@ layout: post
 title:  "Jetpack Compose - an introduction to state"
 date:   2021-11-14 22:00:00 -0300
 categories: android jetpack-compose
-description: A quick look into the best practices for state management in Jetpack Compose
+description: In this article we'll take a quick look into the best practices for state management in Jetpack Compose and how it integrates with other Jetpack libraries
 image: jetpack_compose_post_og_image.png
 ---
 
