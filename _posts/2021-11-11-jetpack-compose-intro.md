@@ -167,9 +167,10 @@ Given that the caller of this component updates the value of `clicks` every time
 
 ## Conclusion
 
-All of this info on state, can lead you into building great reactive UI using Jetpack Compose. The Jetpack tools integrate beautifully with Compose. In future articles, I'll build real world UIs to play around and see what is possible with Compose. I challenge you to do the same!
+All of this info on state, can lead you into building great reactive UI using Jetpack Compose. The Jetpack tools integrate beautifully with Compose. In future articles, I'll build real world UIs to play around and see what is possible with Compose. I challenge you to do the same! If you like Jetpack Compose, I strongly recommend you to read more about it in the references below.
 
 ## References
 
 [Thinking in Compose - Android Developers](https://developer.android.com/jetpack/compose/mental-model)
+
 [Managing state - Android Developers](https://developer.android.com/jetpack/compose/state)
