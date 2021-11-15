@@ -4,7 +4,7 @@ title:  "Jetpack Compose - an introduction to state"
 date:   2021-11-14 22:00:00 -0300
 categories: android jetpack-compose
 description: A quick look into state management in Jetpack Compose
-image: /assets/jetpack_compose_icon_RGB.png
+image: /assets/jetpack_compose_post_og_image.png
 ---
 
 <meta content="{{ site.title }}" property="og:site_name">
@@ -46,7 +46,7 @@ image: /assets/jetpack_compose_icon_RGB.png
   {% endfor %}
 {% endif %}
 
-![Jetpack Compose Logo](/assets/jetpack_compose_icon_RGB.png)
+<img src="/assets/{{ page.image}}">
 
 ## What is Jetpack Compose
 Jetpack Compose is the new declarative UI Toolkit for Android built with Kotlin. It represents a meaningful change in how Android apps' UIs are developed. It works with composable functions, which are functions that, given data as input, convert it into UI. All of the composable functions must be annotated with `@Compose`, which shows the compiler it is going to convert data into UI. The Hello World of Compose is:
