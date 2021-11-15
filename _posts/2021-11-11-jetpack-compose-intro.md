@@ -4,7 +4,7 @@ title:  "Jetpack Compose - an introduction to state"
 date:   2021-11-14 22:00:00 -0300
 categories: android jetpack-compose
 description: A quick look into state management in Jetpack Compose
-image: jetpack_compose_icon_RGB.png
+image: /assets/jetpack_compose_icon_RGB.png
 ---
 
 <meta content="{{ site.title }}" property="og:site_name">
@@ -31,7 +31,7 @@ image: jetpack_compose_icon_RGB.png
   <meta content="{{ site.url }}/about/" property="article:author">
 {% endif %}
 {% if page.image %}
-  <meta content="/assets/{{ page.image }}" property="og:image">
+  <meta content="{{ page.image }}" property="og:image">
 {% else %}
   <!-- <meta content="/img/logo-high-resolution.png" property="og:image"> -->
 {% endif %}
