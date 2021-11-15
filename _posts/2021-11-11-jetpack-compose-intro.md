@@ -52,9 +52,9 @@ image: jetpack_compose_post_og_image.png
   <meta content="{{ site.url }}/about/" property="article:author">
 {% endif %}
 {% if page.image %}
-  <meta content="{{ site.url }}/assets/{{ page.image }}" property="og:image">
+  <meta name="image" content="{{ site.url }}/assets/{{ page.image }}" property="og:image">
 {% else %}
-  <meta content="{{ site.url }}/assets/logo.png" property="og:image">
+  <meta name="image" content="{{ site.url }}/assets/logo.png" property="og:image">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
