@@ -61,7 +61,7 @@ interface MutableState<T> : State<T> {
 ```
 
 Even though `val text = mutableStateOf('')` has the intended effect of creating a state, it has two main problems:
-- If the View, for any reason, is destroyed and constructed again (when the screen rotation changes, for example), the value is lost.
+- The state is not persisted through recomposition, that means, every time the component is rebuilt, the state goes back to the default value.
 - Every time you need the value, it's necessary to use `.value` to get and set it.
 
 We can solve both problems by using the `remember` composable and its `by` delegate syntax. The following code solves it:
@@ -82,7 +82,27 @@ fun SendMessageTextField(
 }
 ```
 
-The `remember` composable stores the state in memory and persists even when the view is destroyed and rebuilt. Also, using the `by` delegate allows us to use the state name directly when we want to get or set it.
+With this implementation, the state is persisted through recomposition but still, if there are configuration changes (screen rotation, for example), the state is lost again. If we need to persist the state even through configuration changes, the solution is to use `rememberSaveable`.
+
+
+
+```kotlin
+@Composable
+fun SendMessageTextField(
+    onSendMessage: (String) -> Unit
+) {
+    val text by remeberSaveable { mutableStateOf('') }
+
+    Row {
+        TextField(value = text, onValueChange = { text = it })
+        IconButton(onClick = onSendMessage(text)) {
+            Icon(imageVector = Icons.Filled.Send, "Send message")
+        }
+    }
+}
+```
+
+The `rememberSaveable` composable stores the state in memory and persists even when the view is destroyed and rebuilt. Also, using the `by` delegate allows us to use the state name directly when we want to get or set it.
 
 The problem with stateful components is that they are more difficult to test and less reusable. The component controls its state and that makes it harder to do checks such as input validation. A better architecture is proposed next.
 
