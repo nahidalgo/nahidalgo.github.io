@@ -46,7 +46,7 @@ image: /assets/jetpack_compose_post_og_image.png
   {% endfor %}
 {% endif %}
 
-<img src="/assets/{{ page.image}}">
+<img src="{{ page.image }}">
 
 ## What is Jetpack Compose
 Jetpack Compose is the new declarative UI Toolkit for Android built with Kotlin. It represents a meaningful change in how Android apps' UIs are developed. It works with composable functions, which are functions that, given data as input, convert it into UI. All of the composable functions must be annotated with `@Compose`, which shows the compiler it is going to convert data into UI. The Hello World of Compose is:
