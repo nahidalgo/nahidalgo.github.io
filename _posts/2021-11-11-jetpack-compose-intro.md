@@ -32,8 +32,6 @@ image: jetpack_compose_icon_RGB.png
 {% endif %}
 {% if page.image %}
   <meta content="/assets/{{ page.image }}" property="og:image">
-  <meta content="720px" property="og:image:width">
-  <meta content="480px" property="og:image:height">
 {% else %}
   <!-- <meta content="/img/logo-high-resolution.png" property="og:image"> -->
 {% endif %}
