@@ -4,8 +4,29 @@ title:  "Jetpack Compose - an introduction to state"
 date:   2021-11-14 22:00:00 -0300
 categories: android jetpack-compose
 description: A quick look into state management in Jetpack Compose
-image: /assets/jetpack_compose_post_og_image.png
+image: jetpack_compose_post_og_image.png
 ---
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@nahidalgo01">
+{% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}">
+{% else %}
+  <meta name="twitter:title" content="{{ site.title }}">
+{% endif %}
+{% if page.url %}
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+{% endif %}
+{% if page.description %}
+  <meta name="twitter:description" content="{{ page.description }}">
+{% else %}
+  <meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+{% if page.image %}
+  <meta name="twitter:image:src" content="{{ site.url }}/assets/{{ page.image }}">
+{% else %}
+  <meta name="twitter:image:src" content="{{ site.url }}/assets/logo.png">
+{% endif %}
 
 <meta content="{{ site.title }}" property="og:site_name">
 {% if page.title %}
@@ -31,9 +52,9 @@ image: /assets/jetpack_compose_post_og_image.png
   <meta content="{{ site.url }}/about/" property="article:author">
 {% endif %}
 {% if page.image %}
-  <meta content="{{ page.image }}" property="og:image">
+  <meta content="{{ site.url }}/assets/{{ page.image }}" property="og:image">
 {% else %}
-  <!-- <meta content="/img/logo-high-resolution.png" property="og:image"> -->
+  <meta content="{{ site.url }}/assets/logo.png" property="og:image">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
