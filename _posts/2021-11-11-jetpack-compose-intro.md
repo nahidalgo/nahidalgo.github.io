@@ -2,8 +2,48 @@
 layout: post
 title:  "Jetpack Compose - an introduction to state"
 date:   2021-11-14 22:00:00 -0300
-categories: android compose
+categories: android jetpack-compose
+image: jetpack_compose_icon_RGB.png
 ---
+
+<meta content="{{ site.title }}" property="og:site_name">
+{% if page.title %}
+  <meta content="{{ page.title }}" property="og:title">
+{% else %}
+  <meta content="{{ site.title }}" property="og:title">
+{% endif %}
+{% if page.title %}
+  <meta content="article" property="og:type">
+{% else %}
+  <meta content="website" property="og:type">
+{% endif %}
+{% if page.description %}
+  <meta content="{{ page.description }}" property="og:description">
+{% else %}
+  <meta content="{{ site.description }}" property="og:description">
+{% endif %}
+{% if page.url %}
+  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+{% endif %}
+{% if page.date %}
+  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+  <meta content="{{ site.url }}/about/" property="article:author">
+{% endif %}
+{% if page.image %}
+  <meta content="/assets/{{ page.image }}" property="og:image">
+{% else %}
+  <!-- <meta content="/img/logo-high-resolution.png" property="og:image"> -->
+{% endif %}
+{% if page.categories %}
+  {% for category in page.categories limit:1 %}
+  <meta content="{{ category }}" property="article:section">
+  {% endfor %}
+{% endif %}
+{% if page.tags %}
+  {% for tag in page.tags %}
+  <meta content="{{ tag }}" property="article:tag">
+  {% endfor %}
+{% endif %}
 
 ## What is Jetpack Compose
 Jetpack Compose is the new declarative UI Toolkit for Android built with Kotlin. It represents a meaningful change in how Android apps' UIs are developed. It works with composable functions, which are functions that, given data as input, convert it into UI. All of the composable functions must be annotated with `@Compose`, which shows the compiler it is going to convert data into UI. The Hello World of Compose is:
