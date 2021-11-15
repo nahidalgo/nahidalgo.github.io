@@ -25,7 +25,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Micro coffee producer as a hobby.
   Like to build as I learn and break stuff.
 baseurl: "" # the subpath of your site, e.g. /blog
-images_url: "http://www.nahidalgo.com/assets"
 url: "https://www.nahidalgo.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: nahidalgo01
 github_username: nahidalgo
