@@ -31,8 +31,8 @@ image: jetpack_compose_icon_RGB.png
 {% endif %}
 {% if page.image %}
   <meta content="/assets/{{ page.image }}" property="og:image">
-  <meta content="720" property="og:image:width">
-  <meta content="480" property="og:image:height">
+  <meta content="720px" property="og:image:width">
+  <meta content="480px" property="og:image:height">
 {% else %}
   <!-- <meta content="/img/logo-high-resolution.png" property="og:image"> -->
 {% endif %}
@@ -47,6 +47,8 @@ image: jetpack_compose_icon_RGB.png
   {% endfor %}
 {% endif %}
 
+![Jetpack Compose Logo](/assets/jetpack_compose_icon_RGB.png)
+
 ## What is Jetpack Compose
 Jetpack Compose is the new declarative UI Toolkit for Android built with Kotlin. It represents a meaningful change in how Android apps' UIs are developed. It works with composable functions, which are functions that, given data as input, convert it into UI. All of the composable functions must be annotated with `@Compose`, which shows the compiler it is going to convert data into UI. The Hello World of Compose is:
 
@@ -56,7 +58,6 @@ fun Greeting(name: String) {
 	Text("Hello, $name")
 }
 ```
-![Jetpack Compose Logo](/assets/{{ page.image }}.png)
 
 From the example, it's possible to note that given a name as input, the `Text()` function is called, which itself is a composable function. The `Text()` function is responsible for creating the text UI element itself on the screen. The `name` parameter passed as input, is the data that will be used to describe our UI. Also, composable functions don't need to return anything as it only describes what the UI needs to look like with a given state. The state is the key to building great and responsive reactive UIs.
 
